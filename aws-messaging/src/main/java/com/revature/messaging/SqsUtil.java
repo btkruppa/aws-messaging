@@ -14,7 +14,7 @@ public class SqsUtil {
 										.builder()
 										.withCredentials(new AWSStaticCredentialsProvider(awsCreds))
 										.build();
-	private final String QUEUE_URL = "https://sqs.us-west-2.amazonaws.com/492203503159/demo-queue";
+	private final String QUEUE_URL = System.getenv("MESSAGING_QUEUE_URL");
 	
 	/**
 	 * Would be better if we passed in a parameter to determine the queue to poll from

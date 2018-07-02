@@ -30,5 +30,32 @@ After doing that from the UI we will look at sending, receiving, and deleting me
 
 - It should refresh the queue and show 1 message available. You can send a few more if you want.
 
+- You can select View/Delete Messages from the dropdown as well to try things out.
+
+### Viewing and Deleting Messages From Java
+- To do this properly we will first need to create and IAM user.
+
+- Open up the IAM service, prefferably in another tab. 
+
+- Creating a user
+  - Select Users from the side nav on the left.
+  - Select Add user now.
+  - I will give mine a username of java-demo
+  - Access type you only need to select Programmatic access.
+  - Select Next: Permissions
+  - Select Create group
+  - I will name my group java-demo-group, multiple users can be attached to groups.
+  - In the table below, search for and select both AmazonSNSFullAccess and AmazonSQSFullAccess. - note that in an actual production application you wouldn't want to give full access to all of sns and sqs but rather you would create a more restrictive policy that only allows for certain operations on certain sns topics and sqs queues.
+  - Select Create group from the bottom.
+  - Select Next: Review
+  - Select Create-user
+  - Note the access keys, AND NEVER HARD CODE THESE OR PUT THEM IN A FILE THAT WILL BE PUSHED TO AN ONLINE REPO!!!!!
+  - We will store these in environment variables.
+  - Add an environment variable called MESSAGING_ACCESS_KEY with the access key id, and add an environment variable called MESSAGING_SECRET_ACCESS_KEY
+  - Then you can close the page showing your keys - note if you did this wrong you cannot view these keys again, you will have to create a new user which isn't that big a deal.
+  - We will aso need to add an environment variable called MESSAGING_QUEUE_URL which has the url specified in the details when you select your queue in SQS.
+  - If you had eclipse open before you added the environment variables you will have to restart it for the code to recognize them.
+  - You should now be able to run the launcher to perform the operation you would like to do and it should work for SQS.
+
 # SNS
 SNS is the Simple Notification Service provided by AWS. With SNS we can send messages to topics and the topic will push that message out to all of its subscribers. SNS will not store messages so if one of the subscribers is down at the time a message is published it will just be lost. Messages can be published to 

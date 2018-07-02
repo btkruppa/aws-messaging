@@ -21,7 +21,7 @@ public class SnsUtil {
 	 * @param message
 	 */
 	public void publish(String message) {
-		PublishRequest pubRequest = new PublishRequest("arn:aws:sns:us-west-2:492203503159:my-topic", message);
+		PublishRequest pubRequest = new PublishRequest(System.getenv("MESSAGING_TOPIC_ARN"), message);
 		PublishResult pubResult = snsClient.publish(pubRequest);
 		System.out.println("MessageId - " + pubResult.getMessageId());
 	}	
