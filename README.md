@@ -7,7 +7,7 @@ The SQS messaging queues we create would be apart of AWS serverless services. We
 ## AWS Console Demo
 In this demo we will look at using the ui to create a queue, send messages to the queue, view messages, and delete messages. 
 
-After doing that from the UI we will look at sending, receiving, and deleting messages using the AWS SDK in Java. However the AWS SDK does have the functionaity to much more such as creating, configuring, and deting queues altogether. 
+After doing that from the UI we will look at sending, receiving, and deleting messages using the AWS SDK in Java. However the AWS SDK does have the functionality to much more such as creating, configuring, and deleting queues altogether. 
 
 ### Setting Up The Queue
 - Select the Simple Queue Service from the Services dropdown in the AWS console.
@@ -23,7 +23,7 @@ After doing that from the UI we will look at sending, receiving, and deleting me
 
 - Then select Create Queue at the bottom.
 
-### Working with messgaes
+### Working With Messages
 - You should now see your queue in the table. 
 
 - Select you queue and then at the top select Send Message from the Queue Action dropdown.
@@ -78,7 +78,7 @@ The process of creating a topic is very easy. Select create topic and give it a 
 
 # Practical Use Cases
 ## Scenario 1 
-Lets say we updated a Trainer from our application Caliber. Caliber could save it in it's database and then push the updated user to an SNS topic. The topic could then push that message into an SQS queue for BAM, Assign Force, and Track Force. This way each app could process the messages from their own queues at their own rate. 
+Let's say we updated a Trainer from our application Caliber. Caliber could save it in it's database and then push the updated user to an SNS topic. The topic could then push that message into an SQS queue for BAM, Assign Force, and Track Force. This way each app could process the messages from their own queues at their own rate. 
 
 ## Scenario 2
 Or another use case might be an application where a purchase is made. It would update it's database and send a message to some topic saying that the purchase was made. Then the topic could send that message to a queue that ends up being used to send out confirmation emails and another queue that notifies the actual vendor that was selling the item on the website.
@@ -100,9 +100,9 @@ PLEASE NEVER HARD CODE ACCESS KEYS INTO YOUR CODE OR PUT THEM IN A FILE THAT GET
 ALSO PLEASE NEVER CREATE KEYS THAT HAVE FULL ADMIN ACCESS TO EVERY SERVICE THAT AWS PROVIDES!!!!!!!!!!!!
 
 ## Viewing and Deleting Messages From Java
-- To do this properly we will first need to create and IAM user.
+- To do this properly we will first need to create an IAM user.
 
-- Open up the IAM service, prefferably in another tab. 
+- Open up the IAM service, preferably in another tab. 
 
 - Creating a user
   - Select Users from the side nav on the left.
