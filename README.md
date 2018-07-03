@@ -88,10 +88,10 @@ In this scenario what if something was off with the message and it caused the ap
 
 # Java Demo
 ## Environment Variables Needed For This Demo
-MESSAGING_ACCESS_KEY - this is an IAM user's access key id
-MESSAGING_SECRET_ACCESS_KEY - this is the IAM user's secret access key, you must get this at the time the user is created
-MESSAGING_TOPIC_ARN - the arn for the topic
-MESSAGING_QUEUE_URL - not the ARN for the messaging queue but the url
+MESSAGING_ACCESS_KEY - this is an IAM user's access key id  
+MESSAGING_SECRET_ACCESS_KEY - this is the IAM user's secret access key, you must get this at the time the user is created  
+MESSAGING_TOPIC_ARN - the arn for the topic  
+MESSAGING_QUEUE_URL - not the ARN for the messaging queue but the url  
 
 note that after updating environment variables you will have to restart eclipse if it is open for it see see the new values.
 
@@ -122,7 +122,7 @@ ALSO PLEASE NEVER CREATE KEYS THAT HAVE FULL ADMIN ACCESS TO EVERY SERVICE THAT 
   - Then you can close the page showing your keys - note if you did this wrong you cannot view these keys again, you will have to create a new user which isn't that big a deal.
 
 ## Running The Demo
-Be sure you have all of the environment variables on your computer.
+Be sure you have all of the environment variables on your computer.  
 Clone this repo and import the maven project.
 
 There is a SnsUtil that has a method for publishing a message to our SNS topic.
