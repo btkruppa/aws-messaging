@@ -6,13 +6,13 @@ import com.revature.messaging.SqsUtil;
 
 public class Launcher {
 	public static void main(String[] args) {
-//		SnsUtil snsUtil = new SnsUtil();
-//		snsUtil.publish("testing from java");
+		SnsUtil snsUtil = new SnsUtil();
+		snsUtil.publish("testing from java");
 		
 		
-		SqsUtil sqsUtil = new SqsUtil();
-		ReceiveMessageResult message = sqsUtil.poll();
-		sqsUtil.deleteMessage(message.getMessages().get(0).getReceiptHandle());
+//		SqsUtil sqsUtil = new SqsUtil();
+//		ReceiveMessageResult message = sqsUtil.poll();
+//		sqsUtil.deleteMessage(message.getMessages().get(0).getReceiptHandle());
 		
 	}
 }

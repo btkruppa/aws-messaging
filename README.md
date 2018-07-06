@@ -92,6 +92,7 @@ MESSAGING_ACCESS_KEY - this is an IAM user's access key id
 MESSAGING_SECRET_ACCESS_KEY - this is the IAM user's secret access key, you must get this at the time the user is created  
 MESSAGING_TOPIC_ARN - the arn for the topic  
 MESSAGING_QUEUE_URL - not the ARN for the messaging queue but the url  
+MESSAGING_REGION - the aws region you are working out of, mine is usually us-west-2
 
 note that after updating environment variables you will have to restart eclipse if it is open for it see see the new values.
 
