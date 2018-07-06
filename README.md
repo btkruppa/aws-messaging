@@ -100,7 +100,7 @@ note that after updating environment variables you will have to restart eclipse 
 PLEASE NEVER HARD CODE ACCESS KEYS INTO YOUR CODE OR PUT THEM IN A FILE THAT GETS PUSHED TO YOUR ONLINE REPO!!!!!!!!!!!
 ALSO PLEASE NEVER CREATE KEYS THAT HAVE FULL ADMIN ACCESS TO EVERY SERVICE THAT AWS PROVIDES!!!!!!!!!!!!
 
-## Viewing and Deleting Messages From Java
+## Setting up the AWS SDK
 - To do this properly we will first need to create an IAM user.
 
 - Open up the IAM service, preferably in another tab. 
