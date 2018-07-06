@@ -13,6 +13,7 @@ public class SqsUtil {
 	private AmazonSQS sqsClient = AmazonSQSClient
 										.builder()
 										.withCredentials(new AWSStaticCredentialsProvider(awsCreds))
+										.withRegion(System.getenv("MESSAGING_REGION"))
 										.build();
 	private final String QUEUE_URL = System.getenv("MESSAGING_QUEUE_URL");
 	
